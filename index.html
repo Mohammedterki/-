@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بوابة القرآن الكريم | بلوكاريف محمد</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="badge">بسم الله الرحمن الرحيم</p>
+      <h1>بوابة القرآن الكريم</h1>
+      <p class="subtitle">مرحبًا بك يا <strong>بلوكاريف محمد</strong> — موقع شامل للقرآن الكريم، الإذاعة، الأحاديث، التفسير، الترجمة، وإعدادات القراءة.</p>
+      <div class="hero-actions">
+        <a href="#quran" class="btn">ابدأ التلاوة</a>
+        <a href="#reciters" class="btn btn-outline">مشاهير القراء</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="quran" class="card">
+      <h2>📖 القرآن الكريم</h2>
+      <p>اختر السورة ثم استمع للتلاوة أو اقرأ النص بسهولة.</p>
+      <div class="grid-two">
+        <label>السورة
+          <select id="surahSelect"></select>
+        </label>
+        <label>الآية (اختياري)
+          <input id="ayahInput" type="number" min="1" placeholder="مثال: 1" />
+        </label>
+      </div>
+      <div class="actions">
+        <button id="openQuran" class="btn">فتح في المصحف الإلكتروني</button>
+      </div>
+    </section>
+
+    <section id="radio" class="card">
+      <h2>📻 إذاعة القرآن الكريم</h2>
+      <p>استمع للبث المباشر لإذاعة القرآن الكريم.</p>
+      <audio controls preload="none" class="audio-player">
+        <source src="https://stream.radiojar.com/8s5u5tpdtwzuv" type="audio/mpeg" />
+        متصفحك لا يدعم تشغيل الصوت.
+      </audio>
+    </section>
+
+    <section id="hadith" class="card">
+      <h2>🕋 الأحاديث النبوية</h2>
+      <blockquote id="hadithText">قال رسول الله ﷺ: «خيركم من تعلم القرآن وعلمه».</blockquote>
+      <button id="newHadith" class="btn btn-outline">حديث آخر</button>
+    </section>
+
+    <section id="tafsir" class="card">
+      <h2>📚 التفسير والترجمة</h2>
+      <p>اختر مصدر التفسير أو الترجمة لفتح الآية مباشرة:</p>
+      <div class="grid-two">
+        <button class="btn btn-outline tafsir-link" data-url="https://quran.com/1?translations=20&tafsirs=169">تفسير السعدي</button>
+        <button class="btn btn-outline tafsir-link" data-url="https://quran.com/1?translations=131">الترجمة الإنجليزية (Sahih International)</button>
+      </div>
+    </section>
+
+    <section id="reciters" class="card">
+      <h2>🎙️ مشاهير القرّاء</h2>
+      <ul class="reciters">
+        <li>الشيخ عبد الباسط عبد الصمد</li>
+        <li>الشيخ مشاري راشد العفاسي</li>
+        <li>الشيخ ماهر المعيقلي</li>
+        <li>الشيخ سعود الشريم</li>
+        <li>الشيخ ياسر الدوسري</li>
+      </ul>
+    </section>
+
+    <section id="settings" class="card">
+      <h2>⚙️ الإعدادات</h2>
+      <div class="grid-two">
+        <label>حجم الخط
+          <input id="fontSize" type="range" min="16" max="28" value="20" />
+        </label>
+        <label>الوضع الليلي
+          <input id="darkMode" type="checkbox" />
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>تم التصميم خصيصًا لـ بلوكاريف محمد — جعله الله في ميزان حسناتك.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
